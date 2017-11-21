@@ -22,6 +22,33 @@ output: html_document: default
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting!-->
 
+First we create our Bdays
+
+```{r}
+Bdays <- 1:365
+brownprofit=numeric(1137)
+
+```
+now we pick 35 of them to form a class and loop thru 1137 classes keeping score.
+```{r}
+for (i in 1:1137) {
+
+ourclass <- sample (x=Bdays,size=35, replace= TRUE)
+
+xx <- anyDuplicated(ourclass)
+
+#now we need to see if any two in our class match
+
+brownprofit[i]<- ifelse(xx>0,1,-2)
+}
+
+hiswinning <- sum(brownprofit)
+print (hiswinning)
+
+```
+### Brownlows profit 'r hiswinning'
+
+
 
 # Confidence interval of Brownlows earning
 

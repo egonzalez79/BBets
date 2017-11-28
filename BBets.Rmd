@@ -17,7 +17,7 @@ output: html_document: default
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 1137 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
-
+we will approach this problem through a sequence of simulations.  First we will let the numbers going from 1 to 365 represent the different possible Bdays a student could have(1 would be Jan 1st, 32 would be Feb 1st etc). Then we will randomly select(with replacement to insure two of the same number could be chosen)35 numbers to represent the class. Then we need to examin the numbers chosen to see if any are duplicates (a duplicate would represent two people with the same Bday). If there is a duplicate we will give Brownlow 1 dollar for this bet, if not we will take 2 dollars away from him. We will do this same procedure 1137 times. at the end we will total his winnings and loosings and we will use that number as an estimate of his take-home.
 #Profit Estimate
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting!-->
